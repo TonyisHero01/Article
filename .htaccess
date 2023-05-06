@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /~76824974/cms/
+#RewriteBase /
+Options -MultiViews
+
+RewriteCond %{REQUEST_URI} !index\.php
+RewriteRule ^([-a-zA-Z0-9_/]+)$ index.php?%{QUERY_STRING}&page=$1 [L]
